@@ -15,7 +15,7 @@ const HomePage = () => {
   const [pins, setPins] = useState([`white`, `white`, `white`, `white`, `white`, `white`, `white`, `white`, `white`, `white`]);
   const [frames, addFrame] = useState([]);
   useEffect(() => {
-    if (done === false && frames.length === 11 || (frames.length === 10 && !frames[frames.length - 1].addedValue)) {
+    if (!done && frames.length === 11 || (frames.length === 10 && !frames[frames.length - 1].addedValue)) {
       finishGame(true)
       setScore(frames.map((f, ind) => f.addedValue ? f.addedValue === 2 ? 10 + frames[ind + 1].first + frames[ind + 1].second : 10 + frames[ind + 1].first : f.first + f.second).reduce((a, b) => a + b))
       addFrame([])
