@@ -3,7 +3,7 @@ const multer = require('multer');
 const { uploadFile, getFileStream } = require('./s3.js')
 
 const AWS = require('aws-sdk/dist/aws-sdk-react-native');
-const pot = 4000;
+const port = 4000;
 const app = express();
 const putImages = multer({dest: 'assets/'})
 
