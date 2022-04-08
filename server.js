@@ -1,6 +1,6 @@
-import express from 'express';
-import multer from 'multer';
-import { uploadFile, getFileStream } from './s3.js'
+const express = require('express');
+const multer = require('multer');
+const { uploadFile, getFileStream } = require('./s3.js')
 
 const AWS = require('aws-sdk/dist/aws-sdk-react-native');
 const pot = 4000;
