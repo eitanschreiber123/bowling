@@ -53,6 +53,7 @@ const HomePage = () => {
               } else {
                 setPins(pins.map(p => p === `white` ? p : `pressed`))
                 setCurrent({first: pins.filter(p => p === `black`).length,second:null})
+                console.log(`eitan`);
               }
             }}>next</p>
             </section>
